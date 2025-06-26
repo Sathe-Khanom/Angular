@@ -4,20 +4,33 @@ import { BrowserModule, provideClientHydration, withEventReplay } from '@angular
 import { AppRoutingModule } from './app-routing-module';
 import { App } from './app';
 import { Home } from './home/home';
+import { ViewAllStudent } from './view-all-student/view-all-student';
+import { provideHttpClient, withFetch } from '@angular/common/http';
+import { AddStudent } from './add-student/add-student';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { UpdateStudent } from './update-student/update-student';
 
 @NgModule({
   declarations: [
     App,
-    Home
+    Home,
+    ViewAllStudent,
+    AddStudent,
+    UpdateStudent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers: [
     provideBrowserGlobalErrorListeners(),
     provideZonelessChangeDetection(),
-    provideClientHydration(withEventReplay())
+    provideClientHydration(withEventReplay()),
+    provideHttpClient(
+      withFetch()
+    )
   ],
   bootstrap: [App]
 })
