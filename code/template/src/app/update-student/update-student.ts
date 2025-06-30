@@ -40,7 +40,10 @@ export class UpdateStudent implements OnInit {
       }
     });
 
-  }
+  }       
+
+
+  
 
   updateStudent(): void {
     this.studentService.updateStudent(this.id, this.student)
