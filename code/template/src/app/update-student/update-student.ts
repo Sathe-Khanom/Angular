@@ -34,6 +34,7 @@ export class UpdateStudent implements OnInit {
     this.studentService.getStudentById(this.id).subscribe({
       next: (res) => {
         this.student = res;
+        this.cdr.markForCheck();
       },
       error: (error) => {
         console.log(error);

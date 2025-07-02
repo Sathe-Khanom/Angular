@@ -45,7 +45,7 @@ export class ViewAllStudent implements OnInit {
       next : (res) =>{
         console.log(res)
         console.log("Data get Successfull");
-        this.router.navigate(['/updatestudent',id]);
+        this.router.navigate(['upstu',id]);
       },
 
       error: (err) =>{

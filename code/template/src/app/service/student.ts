@@ -34,12 +34,12 @@ export class StudentService {
     return this.http.put(this.baseUrl + '/' + id, student);
   }
 
-  private handleError(error: any) {
+  //private handleError(error: any) {
 
-    console.error('An error occurred:', error);
-    return throwError(() => new Error('test'));
+    //console.error('An error occurred:', error);
+   // return throwError(() => new Error('test'));
 
-  }
+ // }
 
 
 
