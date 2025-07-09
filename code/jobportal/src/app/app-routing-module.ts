@@ -9,6 +9,12 @@ import { ProfileUser } from './components/jobseeker/profile-user/profile-user';
 import { ProfileEmp } from './components/employer/profile-emp/profile-emp';
 import { DashboardEmp } from './components/employer/dashboard-emp/dashboard-emp';
 import { DashboardUser } from './components/jobseeker/dashboard-user/dashboard-user';
+import { AddJob } from './components/job/add-job/add-job';
+import { ViewAllJob } from './components/job/view-all-job/view-all-job';
+import { UpdateJob } from './components/job/update-job/update-job';
+import { JobDetails } from './components/job/job-details/job-details';
+import { ViewAllEmployer } from './components/job/view-all-employer/view-all-employer';
+import { ViewAllJobSeeker } from './components/job/view-all-job-seeker/view-all-job-seeker';
 
 const routes: Routes = [
 {path:'', component: Home},
@@ -19,7 +25,13 @@ const routes: Routes = [
 {path:'profileuser', component: ProfileUser},
 {path:'profileemp', component: ProfileEmp},
 {path:'dashemp', component: DashboardEmp},
-{path:'dashuser', component: DashboardUser}
+{path:'dashuser', component: DashboardUser},
+{path:'addjob', component: AddJob},
+{path:'alljob', component: ViewAllJob},
+{path:'updatejob', component: UpdateJob},
+{path:'jobdetails', component: JobDetails},
+{path:'allemp', component: ViewAllEmployer},
+{path:'alljobseeker', component: ViewAllJobSeeker}
 
 ];
 

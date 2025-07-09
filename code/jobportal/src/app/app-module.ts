@@ -12,6 +12,14 @@ import { LoginEmp } from './components/employer/login-emp/login-emp';
 import { ProfileEmp } from './components/employer/profile-emp/profile-emp';
 import { DashboardEmp } from './components/employer/dashboard-emp/dashboard-emp';
 import { Home } from './components/home/home';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { provideHttpClient, withFetch } from '@angular/common/http';
+import { AddJob } from './components/job/add-job/add-job';
+import { ViewAllJob } from './components/job/view-all-job/view-all-job';
+import { UpdateJob } from './components/job/update-job/update-job';
+import { JobDetails } from './components/job/job-details/job-details';
+import { ViewAllJobSeeker } from './components/job/view-all-job-seeker/view-all-job-seeker';
+import { ViewAllEmployer } from './components/job/view-all-employer/view-all-employer';
 
 @NgModule({
   declarations: [
@@ -24,16 +32,25 @@ import { Home } from './components/home/home';
     LoginEmp,
     ProfileEmp,
     DashboardEmp,
-    Home
+    Home,
+    AddJob,
+    ViewAllJob,
+    UpdateJob,
+    JobDetails,
+    ViewAllJobSeeker,
+    ViewAllEmployer
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers: [
     provideBrowserGlobalErrorListeners(),
     provideZonelessChangeDetection(),
-    provideClientHydration(withEventReplay())
+    provideClientHydration(withEventReplay()),
+    provideHttpClient(withFetch())
   ],
   bootstrap: [App]
 })
