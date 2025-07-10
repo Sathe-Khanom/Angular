@@ -191,5 +191,40 @@
       "role": "user"
     }
   ],
-  "job": []
+  "job": [
+
+  ],
+
+"jobDetails": [
+
+ {
+      "id": "1",
+      "title": "Frontend Developer",
+      "company": "ABC Tech Ltd.",
+      "location": "Dhaka",
+      "posted": "3 days ago",
+      "salary": "৳60,000 - ৳80,000",
+      "description": "We are looking for a passionate frontend developer.",
+      "responsibilities": [
+        "Develop new user-facing features",
+        "Ensure UI/UX designs are feasible",
+        "Optimize for performance"
+      ],
+      "requirements": [
+        "BSc in Computer Science",
+        "Strong in HTML, CSS, JS",
+        "Experience with REST APIs"
+      ],
+      "benefits": "Festival Bonus, Remote Work Option",
+      "deadline": "July 30, 2025",
+      "companyEmail": "hr@abctech.com",
+      "companyPhone": "01234-567890",
+      "companyAddress": "Gulshan, Dhaka",
+      "website": "https://abctech.com"
+    }
+  
+]
+
+
+
 }

@@ -1,53 +1,87 @@
-<!-- Hero Section -->
-<section class="bg-success text-white text-center py-5">
-  <div class="container">
-    <h1 class="display-4">Find Your Dream Job</h1>
-    <p class="lead">Search thousands of jobs from top companies</p>
-    <a href="/jobs" class="btn btn-light btn-lg mt-3">Browse Jobs</a>
-  </div>
-</section>
 
-<!-- Job Categories -->
-<section class="py-5 bg-light">
-  <div class="container">
-    <h2 class="text-center mb-4">Job Categories</h2>
-    <div class="row text-center">
-      <div class="col-md-3 mb-3">
-        <div class="card h-100 shadow-sm">
-          <div class="card-body">
-            <h5 class="card-title"></h5>
-            <p class="card-text">Jobs Available</p>
+<head>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+</head>
+
+
+
+
+<body class="bg-light">
+
+  <!-- Hero Section -->
+  <section class="bg-primary text-white py-5 text-center">
+    <div class="container">
+      <h1 class="display-4">Welcome to Dream Job Portal</h1>
+      <p class="lead">Find your dream job today!</p>
+      <form class="row justify-content-center mt-4">
+        <div class="col-md-4">
+          <input type="text" class="form-control" placeholder="Job title or keyword">
+        </div>
+        <div class="col-md-3">
+          <input type="text" class="form-control" placeholder="Location">
+        </div>
+        <div class="col-md-2">
+          <button type="submit" class="btn btn-warning w-100">Search</button>
+        </div>
+      </form>
+    </div>
+  </section>
+
+  <!-- Featured Jobs -->
+  <section class="py-5">
+    <div class="container">
+      <h2 class="text-center mb-5 text-success ">Featured Jobs</h2>
+      <div class="row g-4">
+
+        <!-- Job Card -->
+        <div class="col-md-4">
+          <div class="card border-0 shadow-lg h-100">
+            <div class="card-body">
+              <h5 class="card-title text-primary">Frontend Developer</h5>
+              <p class="card-text">Company: ABC Tech Ltd.<br>Location: Dhaka<br>Salary: ৳60,000/month</p>
+              <a href="#" class="btn btn-outline-primary btn-sm">View Details</a>
+            </div>
           </div>
         </div>
-      </div>
-    </div>
-  </div>
-</section>
 
-<!-- Recent Jobs -->
-<section class="py-5">
-  <div class="container">
-    <h2 class="text-center mb-4">Recent Job Listings</h2>
-    <div class="row">
-      <div class="col-md-6 mb-4" >
-        <div class="card shadow-sm">
-          <div class="card-body">
-            <h5 class="card-title"></h5>
-            <p class="card-text"></p>
-            <a [routerLink]="[]" class="btn btn-primary btn-sm">View Details</a>
+        <!-- Job Card -->
+        <div class="col-md-4">
+          <div class="card border-0 shadow-lg h-100">
+            <div class="card-body">
+              <h5 class="card-title text-success">Backend Engineer</h5>
+              <p class="card-text">Company: XYZ Solutions<br>Location: Chittagong<br>Salary: ৳70,000/month</p>
+              <a href="#" class="btn btn-outline-success btn-sm">View Details</a>
+            </div>
           </div>
         </div>
+
+        <!-- Job Card -->
+        <div class="col-md-4">
+          <div class="card border-0 shadow-lg h-100">
+            <div class="card-body">
+              <h5 class="card-title text-danger">UI/UX Designer</h5>
+              <p class="card-text">Company: DesignPro<br>Location: Remote<br>Salary: ৳55,000/month</p>
+              <a href="#" class="btn btn-outline-danger btn-sm">View Details</a>
+            </div>
+          </div>
+        </div>
+
       </div>
     </div>
-  </div>
-</section>
+  </section>
 
-<!-- Call to Action -->
-<section class="bg-dark text-white text-center py-5">
-  <div class="container">
-    <h2>Looking to Hire?</h2>
-    <p class="lead">Post a job and get the right candidate today.</p>
-    <a href="/post-job" class="btn btn-light btn-lg">Post a Job</a>
-  </div>
-</section>
+  <!-- Call to Action -->
+  <section class="bg-warning text-dark py-5 text-center">
+    <div class="container">
+      <h3>Are you an Employer?</h3>
+      <p>Post a job and find the right candidate fast.</p>
+      <a href="#" class="btn btn-dark">Post a Job</a>
+    </div>
+  </section>
+
+  
+
+</body>
+
 

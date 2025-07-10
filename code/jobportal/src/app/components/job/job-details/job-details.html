@@ -1,1 +1,62 @@
-<p>job-details works!</p>
+<!-- Job Title Header -->
+<section class="bg-info text-white py-4"  *ngIf="jobdetails">
+  <div class="container">
+    <h2 class="mb-0">{{ jobdetails.title }}</h2>
+    <p class="mb-0">Company: {{ jobdetails.company }} | Location: {{ jobdetails.location }} | Posted: {{ jobdetails.posted }}</p>
+  </div>
+</section>
+
+<!-- Job Details Content -->
+<section class="py-5"  *ngIf="jobdetails">
+  <div class="container">
+    <div class="row g-4">
+
+      <!-- Main Job Info -->
+      <div class="col-md-8">
+        <div class="card shadow-sm">
+          <div class="card-body">
+            <h4 class="text-primary">Job Description</h4>
+            <p>{{ jobdetails.description }}</p>
+
+            <h5 class="text-success mt-4">Responsibilities</h5>
+            <ul>
+              <li *ngFor="let item of jobdetails.responsibilities">{{ item }}</li>
+            </ul>
+
+            <h5 class="text-danger mt-4">Requirements</h5>
+            <ul>
+              <li *ngFor="let item of jobdetails.requirements">{{ item }}</li>
+            </ul>
+
+            <h5 class="text-warning mt-4">Salary & Benefits</h5>
+            <p>{{ jobdetails.salary }}<br>{{ jobdetails.benefits }}</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Sidebar -->
+      <div class="col-md-4">
+        <div class="card mb-4 shadow-sm text-center">
+          <div class="card-body">
+            <h5 class="text-primary">Apply Now</h5>
+            <button class="btn btn-success w-100">Submit Resume</button>
+            <p class="text-muted mt-2">Deadline: {{ jobdetails.deadline }}</p>
+          </div>
+        </div>
+
+        <div class="card shadow-sm">
+          <div class="card-body">
+            <h5 class="text-info">Company Info</h5>
+            <p><strong>{{ jobdetails.company }}</strong><br>
+              Address: {{ jobdetails.companyAddress }}<br>
+              Email: {{ jobdetails.companyEmail }}<br>
+              Phone: {{ jobdetails.companyPhone }}</p>
+            <a [href]="" target="_blank" class="btn btn-outline-primary btn-sm">Visit Website</a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+

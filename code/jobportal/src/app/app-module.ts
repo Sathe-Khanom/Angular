@@ -20,6 +20,8 @@ import { UpdateJob } from './components/job/update-job/update-job';
 import { JobDetails } from './components/job/job-details/job-details';
 import { ViewAllJobSeeker } from './components/job/view-all-job-seeker/view-all-job-seeker';
 import { ViewAllEmployer } from './components/job/view-all-employer/view-all-employer';
+import { AddJobDetails } from './components/job/add-job-details/add-job-details';
+import { Updatejobdetails } from './components/job/updatejobdetails/updatejobdetails';
 
 @NgModule({
   declarations: [
@@ -38,7 +40,9 @@ import { ViewAllEmployer } from './components/job/view-all-employer/view-all-emp
     UpdateJob,
     JobDetails,
     ViewAllJobSeeker,
-    ViewAllEmployer
+    ViewAllEmployer,
+    AddJobDetails,
+    Updatejobdetails
   ],
   imports: [
     BrowserModule,
