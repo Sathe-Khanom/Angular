@@ -1,0 +1,37 @@
+<div *ngIf="job" class="card p-4">
+  <h3>{{ job.title }}</h3>
+  <h5 class="text-muted">{{ job.company }}</h5>
+  <p><strong>Location:</strong> {{ job.location }}</p>
+  <p><strong>Posted:</strong> {{ job.posted }} | <strong>Deadline:</strong> {{ job.deadline }}</p>
+  <p><strong>Salary:</strong> {{ job.salary }}</p>
+
+  <hr>
+
+  <h5>Description</h5>
+  <p>{{ job.description }}</p>
+
+  <h5>Responsibilities</h5>
+  <ul>
+    <li *ngFor="let r of job.responsibilities">{{ r }}</li>
+  </ul>
+
+  <h5>Requirements</h5>
+  <ul>
+    <li *ngFor="let r of job.requirements">{{ r }}</li>
+  </ul>
+
+  <h5>Benefits</h5>
+  <p>{{ job.benefits }}</p>
+
+  <hr>
+
+  <p><strong>Contact:</strong> {{ job.companyEmail }} | {{ job.companyPhone }}</p>
+  <p><strong>Address:</strong> {{ job.companyAddress }}</p>
+  <a [href]="job.website" target="_blank">{{ job.website }}</a>
+
+  <button *ngIf="canApply()" class="btn btn-success mt-3" (click)="applyNow()">Apply Now</button>
+</div>
+
+<div *ngIf="!canApply()" class="alert alert-warning mt-3">
+  Please <a routerLink="/auth/login">login</a> to apply for jobs.
+</div>

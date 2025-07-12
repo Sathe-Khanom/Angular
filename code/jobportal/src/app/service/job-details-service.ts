@@ -20,11 +20,10 @@ export class JobDetailsService {
 
   }
 
-  saveJobDetails(jobdetails: JobDetails): Observable<any> {
+  addJob(job: JobDetails): Observable<any> {
+  return this.http.post(`${this.baseUrl}/jobDetails`, job); // assuming backend is JSON-server or similar
+}
 
-    return this.http.post(this.baseUrl, jobdetails);
-
-  }
 
   deleteJobDetails(id: string): Observable<any> {
 

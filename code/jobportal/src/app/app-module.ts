@@ -17,11 +17,8 @@ import { provideHttpClient, withFetch } from '@angular/common/http';
 import { AddJob } from './components/job/add-job/add-job';
 import { ViewAllJob } from './components/job/view-all-job/view-all-job';
 import { UpdateJob } from './components/job/update-job/update-job';
-import { JobDetails } from './components/job/job-details/job-details';
 import { ViewAllJobSeeker } from './components/job/view-all-job-seeker/view-all-job-seeker';
 import { ViewAllEmployer } from './components/job/view-all-employer/view-all-employer';
-import { AddJobDetails } from './components/job/add-job-details/add-job-details';
-import { Updatejobdetails } from './components/job/updatejobdetails/updatejobdetails';
 
 @NgModule({
   declarations: [
@@ -37,13 +34,11 @@ import { Updatejobdetails } from './components/job/updatejobdetails/updatejobdet
     Home,
     AddJob,
     ViewAllJob,
-    UpdateJob,
-    JobDetails,
+    UpdateJob,    
     ViewAllJobSeeker,
-    ViewAllEmployer,
-    AddJobDetails,
-    Updatejobdetails
+    ViewAllEmployer
   ],
+
   imports: [
     BrowserModule,
     AppRoutingModule,

@@ -12,11 +12,8 @@ import { DashboardUser } from './components/jobseeker/dashboard-user/dashboard-u
 import { AddJob } from './components/job/add-job/add-job';
 import { ViewAllJob } from './components/job/view-all-job/view-all-job';
 import { UpdateJob } from './components/job/update-job/update-job';
-import { JobDetails } from './components/job/job-details/job-details';
 import { ViewAllEmployer } from './components/job/view-all-employer/view-all-employer';
 import { ViewAllJobSeeker } from './components/job/view-all-job-seeker/view-all-job-seeker';
-import { AddJobDetails } from './components/job/add-job-details/add-job-details';
-import { Updatejobdetails } from './components/job/updatejobdetails/updatejobdetails';
 
 const routes: Routes = [
 {path:'', component: Home},
@@ -31,11 +28,8 @@ const routes: Routes = [
 {path:'addjob', component: AddJob},
 {path:'alljob', component: ViewAllJob},
 {path:'updatejob', component: UpdateJob},
-{path:'jobdetails/:id', component: JobDetails},
 {path:'allemp', component: ViewAllEmployer},
-{path:'alljobseeker', component: ViewAllJobSeeker},
-{path: 'addjobdetails', component: AddJobDetails},
-{path: 'updatejobdetails', component: Updatejobdetails}
+{path:'alljobseeker', component: ViewAllJobSeeker}
 
 
 ];
