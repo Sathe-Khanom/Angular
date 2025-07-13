@@ -102,36 +102,10 @@
 "laundry": true
 }
 ],
-"jobDetails":[
+
+"job":[
+
 
     
-],
-
-"users":[
-
-
-
-],
-
-"jobs": [
-    {
-      "id": 1,
-      "title": "Frontend Developer",
-      "company": "Shomvob",
-      "location": "Dhaka",
-      "posted": "2025-07-01",
-      "salary": "BDT 40,000",
-      "description": "Looking for Angular dev...",
-      "responsibilities": ["Build UI", "Use Angular", "Write clean code"],
-      "requirements": ["2+ years experience", "Bootstrap", "TypeScript"],
-      "benefits": "Health Insurance, Paid Leave",
-      "deadline": "2025-07-20",
-      "companyEmail": "hr@shomvob.com",
-      "companyPhone": "01234567890",
-      "companyAddress": "Dhaka, Bangladesh",
-      "website": "https://shomvob.com"
-    }
-  ]
-
-
+]
 }

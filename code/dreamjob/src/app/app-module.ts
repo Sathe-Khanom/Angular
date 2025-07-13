@@ -3,48 +3,27 @@ import { BrowserModule, provideClientHydration, withEventReplay } from '@angular
 
 import { AppRoutingModule } from './app-routing-module';
 import { App } from './app';
-import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { HttpClient,  provideHttpClient, withFetch } from '@angular/common/http';
-import { Header } from './components/shared/header/header';
-import { Footer } from './components/shared/footer/footer';
-import { Login } from './components/auth/login/login';
-import { Register } from './components/auth/register/register';
-import { Joblist } from './components/jobs/joblist/joblist';
-import { Jobdetails } from './components/jobs/jobdetails/jobdetails';
-import { Addjob } from './components/jobs/addjob/addjob';
-import { Dashboard } from './components/admin/dashboard/dashboard';
-import { Managejobs } from './components/admin/managejobs/managejobs';
-import { Profile } from './components/user/profile/profile';
-import { Appliedjobs } from './components/user/appliedjobs/appliedjobs';
-
-
+import { Home } from './components/home/home';
+import { ViewJob } from './components/view-job/view-job';
+import { provideHttpClient, withFetch } from '@angular/common/http';
+import { AddJob } from './components/add-job/add-job';
 
 @NgModule({
   declarations: [
-    App,    
-    Header,
-    Footer,
-    Login,
-    Register,
-    Joblist,
-    Jobdetails,
-    Addjob,
-    Dashboard,
-    Managejobs,
-    Profile,
-    Appliedjobs
+    App,
+    Home,
+    ViewJob,
+    AddJob
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule,
-    FormsModule,
-    ReactiveFormsModule
+    AppRoutingModule
   ],
   providers: [
     provideBrowserGlobalErrorListeners(),
     provideZonelessChangeDetection(),
     provideClientHydration(withEventReplay()),
-      provideHttpClient(withFetch())
+    provideHttpClient(withFetch())
   ],
   bootstrap: [App]
 })

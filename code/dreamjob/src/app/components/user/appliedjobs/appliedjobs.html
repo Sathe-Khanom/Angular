@@ -1,8 +1,0 @@
-<h4>Applied Jobs</h4>
-<div *ngIf="appliedJobs.length === 0">No applied jobs found.</div>
-<ul class="list-group">
-  <li *ngFor="let job of appliedJobs" class="list-group-item">
-    <a [routerLink]="['applied', job.id]">{{ job.title }} at {{ job.company }}</a>
-  </li>
-</ul>
-

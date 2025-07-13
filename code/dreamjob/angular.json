@@ -33,8 +33,8 @@
             ],
             "styles": [
               "src/styles.css",
-              "node_modules/bootstrap/dist/css/bootstrap.min.css",
-              "node_modules/@fortawesome/fontawesome-free/css/all.min.css"
+              "node_modules/@fortawesome/fontawesome-free/css/all.min.css",
+              "node_modules/bootstrap/dist/css/bootstrap.min.css"
             ],
             "scripts": [
               "node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"
@@ -103,6 +103,6 @@
     }
   },
   "cli": {
-    "analytics": "c01b315d-b3aa-4a37-a591-77663bae3e16"
+    "analytics": "689fe61b-f1b3-4f3f-b379-9e2328ec084a"
   }
 }

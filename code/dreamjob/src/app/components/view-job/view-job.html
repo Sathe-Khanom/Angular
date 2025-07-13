@@ -1,0 +1,35 @@
+<div class="container">
+    <h1 class="my-2 text-center">View Job</h1>
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Title</th>
+                <th>Category</th>
+                <th>Job Type</th>
+                <th>Location</th>
+                <th>Post Date</th>
+                <th>Deadline</th>
+                <th>Action</th>
+            </tr>
+
+
+        </thead>
+
+        <tbody>
+            <tr *ngFor="let j of jobs | async">
+                <td>{{j.id}}</td>
+                <td>{{j.title}}</td>
+                <td>{{j.jobtype}}</td>
+                <td>{{j.location}}</td>
+                <td>{{j.pdate}}</td>
+                <td>{{j.deadlinedate}}</td>
+                <td></td>
+
+            </tr>
+
+        </tbody>
+
+    </table>
+
+</div>

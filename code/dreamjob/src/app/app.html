@@ -1,11 +1,101 @@
-<app-header></app-header>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Dream Job Navbar</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <style>
+    .navbar-custom {
+      background: linear-gradient(90deg, #0072ff, #00c6ff);
+    }
+    .navbar-brand img {
+      height: 40px;
+      margin-right: 10px;
+    }
+    .nav-link {
+      color: #ffffff !important;
+      font-weight: 500;
+    }
+    .nav-link:hover {
+      color: #ffd700 !important;
+    }
+    .btn-post {
+      background-color: #ffc107;
+      color: #000;
+      font-weight: 600;
+    }
+    .btn-post:hover {
+      background-color: #e0a800;
+    }
+  </style>
+</head>
+<body>
+  <nav class="navbar navbar-expand-lg navbar-custom">
+    <div class="container-fluid">
+      <a class="navbar-brand d-flex align-items-center" href="#">
+        <img src="dreamjob-logo.png" alt="">
+        <span class="text-white fw-bold fs-4">Dream Job</span>
+      </a>
+      <button class="navbar-toggler text-white" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent">
+        <span class="navbar-toggler-icon"></span>
+      </button>
 
-<div class="container mt-4">
-  <p>Welcome
-    
-  </p>
-  <router-outlet></router-outlet>
-</div>
+      <div class="collapse navbar-collapse" id="navbarContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0 ms-3">
+          <li class="nav-item">
+            <a class="nav-link" href="#">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Jobs</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Companies</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Contact</a>
+          </li>
+        </ul>
+        <div class="d-flex">
+          <a href="#" class="btn btn-post me-2">Post a Job</a>
+          <a href="#" class="btn btn-light">Login</a>
+        </div>
+      </div>
+    </div>
+  </nav>
 
-<app-footer></app-footer>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
+
+
+
+<router-outlet />
+
+
+<footer class="text-white pt-4 pb-3" style="background: linear-gradient(90deg, #00c6ff, #0072ff);">
+  <div class="container text-center text-md-start">
+    <div class="row">
+      <!-- About Section -->
+      <div class="col-md-6 mb-3">
+        <h5 class="fw-bold">Dream Job</h5>
+        <p>
+          Dream Job is your go-to job portal for finding the perfect career. Explore thousands of job opportunities and connect with top companies.
+        </p>
+      </div>
+
+      <!-- Contact Section -->
+      <div class="col-md-6 mb-3">
+        <h5 class="fw-bold">Contact Us</h5>
+        <p>Email: <a href="" class="text-white text-decoration-underline">supportcom</a></p>
+        <p>Phone: +880 123 456 789</p>
+      </div>
+    </div>
+  </div>
+  
+  <!-- Bottom Footer -->
+  <div class="text-center mt-3 border-top pt-2" style="font-size: 0.9rem;">
+    © 2025 Dream Job. All rights reserved.
+  </div>
+</footer>
 
