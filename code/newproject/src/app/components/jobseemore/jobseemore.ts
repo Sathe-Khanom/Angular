@@ -21,8 +21,7 @@ export class Jobseemore implements OnInit, OnDestroy{
   constructor(
     private jobsService: JobsService,
     private userService: UserService,
-    private route: ActivatedRoute,
-    private snackBar: MatSnackBar
+    private route: ActivatedRoute
   ) {}
 
   ngOnInit(): void {
@@ -70,23 +69,20 @@ export class Jobseemore implements OnInit, OnDestroy{
 
     if (userId) {
       if (false) {
-        this.snackBar.open('You have already applied for this job', 'Close', { duration: 3000 });
+      
       } else {
          console.log(`Successfully applied for job ${jobId} by user ${userId}`);
         this.jobsService.applyForJob(jobId, userId).subscribe(
           () => {
             console.log(`Successfully applied for job ${jobId} by user ${userId}`);
-            this.snackBar.open('Application done!', 'Close', { duration: 3000 });
             this.hasApplied = true;
           },
           (error) => {
             console.error('Error applying for job:', error);
-            this.snackBar.open('Error applying for job', 'Close', { duration: 3000 });
           }
         );
       }
     } else {
-      this.snackBar.open('User is not logged in', 'Close', { duration: 3000 });
       console.error('User is not logged in');
     }
   } 

@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { FileService } from '../../service/file-service';
 import { Router } from '@angular/router';
+import { error } from 'console';
 
 @Component({
   selector: 'app-uploadfile',
@@ -10,7 +11,7 @@ import { Router } from '@angular/router';
 })
 export class Uploadfile {
 
- selectedFile: File | null = null; // Initialize selectedFile
+  selectedFile: File | null = null; // Initialize selectedFile
   uploadProgress: number | null = null; // Initialize uploadProgress
   files: any = [];
 
@@ -45,17 +46,22 @@ export class Uploadfile {
 
 
   getFiles(): void {
-    this.fileService.getFiles().subscribe(
-      (response: any[]) => {
+    this.fileService.getFiles().subscribe({
+
+      next: (response: any[]) => {
         response.forEach(element => {
           element.processedImg = 'data:image/jpeg;base64,' + element.data;
           this.files.push(element);
         });
       },
-      error => {
+      error: (error) => {
         console.error('Error fetching files:', error);
       }
-    );
+
+
+    });
+
+
   }
 
 
@@ -64,16 +70,16 @@ export class Uploadfile {
       if (response.body) {
         const fileNameFromUrl = "file";
         const contentType = response.headers.get("Content-Type");
-        
+
         // Ensure contentType is not null
         const blob = new Blob([response.body], { type: contentType || undefined });
-  
+
         const link = document.createElement("a");
         link.href = window.URL.createObjectURL(blob);
         link.download = fileNameFromUrl;
-  
+
         link.click();
-  
+
         window.URL.revokeObjectURL(link.href);
         link.remove();
       } else {

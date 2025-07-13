@@ -3,8 +3,6 @@ import { BrowserModule, provideClientHydration, withEventReplay } from '@angular
 
 import { AppRoutingModule } from './app-routing-module';
 import { App } from './app';
-import { RegistrationUser } from './components/jobseeker/registration-user/registration-user';
-import { LoginUser } from './components/jobseeker/login-user/login-user';
 import { ProfileUser } from './components/jobseeker/profile-user/profile-user';
 import { DashboardUser } from './components/jobseeker/dashboard-user/dashboard-user';
 import { RegistrationEmp } from './components/employer/registration-emp/registration-emp';
@@ -17,14 +15,10 @@ import { provideHttpClient, withFetch } from '@angular/common/http';
 import { AddJob } from './components/job/add-job/add-job';
 import { ViewAllJob } from './components/job/view-all-job/view-all-job';
 import { UpdateJob } from './components/job/update-job/update-job';
-import { ViewAllJobSeeker } from './components/job/view-all-job-seeker/view-all-job-seeker';
-import { ViewAllEmployer } from './components/job/view-all-employer/view-all-employer';
 
 @NgModule({
   declarations: [
     App,
-    RegistrationUser,
-    LoginUser,
     ProfileUser,
     DashboardUser,
     RegistrationEmp,
@@ -34,9 +28,8 @@ import { ViewAllEmployer } from './components/job/view-all-employer/view-all-emp
     Home,
     AddJob,
     ViewAllJob,
-    UpdateJob,    
-    ViewAllJobSeeker,
-    ViewAllEmployer
+    UpdateJob   
+    
   ],
 
   imports: [
