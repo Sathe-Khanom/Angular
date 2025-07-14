@@ -1,16 +1,4 @@
-import { NgModule } from '@angular/core';
-import { CommonModule } from '@angular/common';
-
-
-
-@NgModule({
-  declarations: [],
-  imports: [
-    CommonModule
-  ]
-})
-export class JobModelModule { 
-
+export class JobModelModule {
   id !: string;
   title !: string;
   description !: string;
@@ -20,9 +8,4 @@ export class JobModelModule {
   location !: string;
   pdate !: Date;
   deadlinedate !: Date;
-
-
-
-
-
 }

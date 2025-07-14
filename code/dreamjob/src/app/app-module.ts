@@ -7,17 +7,22 @@ import { Home } from './components/home/home';
 import { ViewJob } from './components/view-job/view-job';
 import { provideHttpClient, withFetch } from '@angular/common/http';
 import { AddJob } from './components/add-job/add-job';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { UpdateJob } from './components/update-job/update-job';
 
 @NgModule({
   declarations: [
     App,
     Home,
     ViewJob,
-    AddJob
+    AddJob,
+    UpdateJob
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers: [
     provideBrowserGlobalErrorListeners(),

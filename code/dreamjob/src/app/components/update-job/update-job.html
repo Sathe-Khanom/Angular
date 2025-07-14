@@ -1,0 +1,77 @@
+<div class="container col-md-8 form-container">
+    <div class="form-title">📝 Edit Job</div>
+
+    <form *ngIf="job.id" (ngSubmit)="updateJob()">
+        <div class="mb-3">
+            <label for="title" class="form-label">Job Title</label>
+            <input type="text" class="form-control" id="title" name="title" placeholder="Enter job title" 
+                required [(ngModel)]="job.title">
+        </div>
+
+        <div class="row">
+            <div class="col-md-6 mb-3">
+                <label for="category" class="form-label">Job Category</label>
+                <select class="form-select" id="category" name="category" [(ngModel)]="job.category" required>
+                    <option selected disabled>Select a category</option>
+                    <option>Information Technology</option>
+                    <option>Marketing</option>
+                    <option>Finance</option>
+                    <option>Design</option>
+                    <option>Education</option>
+                    <option>Sales</option>
+                    <option>Healthcare</option>
+                </select>
+            </div>
+
+            <div class="col-md-6 mb-3">
+                <label for="jobtype" class="form-label">Job Type</label>
+                <select class="form-select" id="jobtype" name="jobtype" [(ngModel)]="job.jobtype" required>
+                    <option selected disabled>Choose...</option>
+                    <option>Full-Time</option>
+                    <option>Part-Time</option>
+                    <option>Internship</option>
+                    <option>Remote</option>
+                </select>
+            </div>
+        </div>
+
+        <div class="mb-3">
+            <label for="location" class="form-label">Location</label>
+            <input type="text" class="form-control" id="location" name="location"
+                placeholder="e.g. Dhaka, Bangladesh" [(ngModel)]="job.location" required>
+        </div>
+
+        <div class="row">
+            <div class="col-md-6 mb-3">
+                <label for="pdate" class="form-label">Posted Date</label>
+                <input type="date" class="form-control" id="pdate" name="pdate"  [(ngModel)]="job.pdate" required>
+            </div>
+
+            <div class="col-md-6 mb-3">
+                <label for="deadlinedate" class="form-label">Deadline</label>
+                <input type="date" class="form-control" id="deadlinedate" name="deadlinedate" [(ngModel)]="job.deadlinedate" required>
+            </div>
+        </div>
+
+        <div class="mb-3">
+            <label for="description" class="form-label">Job Description</label>
+            <textarea class="form-control" id="description" name="description" rows="4"
+                placeholder="Write full job description" [(ngModel)]="job.description" required></textarea>
+        </div>
+
+
+
+        <div class="mb-3">
+            <label for="requirement" class="form-label">Requirements</label>
+            <textarea class="form-control" id="requirement" name="requirement" rows="3"
+                placeholder="List key requirements" [(ngModel)]="job.requirement" required></textarea>
+        </div>
+
+
+
+        <div class="text-center">
+            <button type="submit" class="btn btn-custom px-4 me-3" >Update</button>
+            <button type="reset" class="btn btn-outline-secondary px-4">Reset </button>
+        </div>
+    </form>
+</div>

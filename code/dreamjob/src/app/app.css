@@ -1,0 +1,27 @@
+.navbar-custom {
+    background: linear-gradient(90deg, #0072ff, #00c6ff);
+}
+
+.navbar-brand img {
+    height: 40px;
+    margin-right: 10px;
+}
+
+.nav-link {
+    color: #ffffff !important;
+    font-weight: 500;
+}
+
+.nav-link:hover {
+    color: #ffd700 !important;
+}
+
+.btn-post {
+    background-color: #ffc107;
+    color: #000;
+    font-weight: 600;
+}
+
+.btn-post:hover {
+    background-color: #e0a800;
+}

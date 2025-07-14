@@ -1,5 +1,6 @@
-import { Component } from '@angular/core';
+import { ChangeDetectorRef, Component } from '@angular/core';
 import { JobService } from '../../service/job-service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-view-job',
@@ -9,17 +10,52 @@ import { JobService } from '../../service/job-service';
 })
 export class ViewJob {
 
- jobs: any;
+  jobs: any;
 
-  constructor(private jobService: JobService){}
+  constructor(
+    private jobService: JobService,
+    private router: Router,
+    private cdr: ChangeDetectorRef
+  ) { }
 
   ngOnInit(): void {
-    this.loadAllStudent();
+    this.loadAllJob();
   }
 
-  loadAllStudent(){
+  loadAllJob() {
 
     this.jobs = this.jobService.getAllJob();
+
+  }
+
+  deleteJob(id: string): void {
+    this.jobService.deleteJob(id).subscribe({
+      next: () => {
+
+        console.log('Job deleted');
+        this.loadAllJob();
+        this.cdr.reattach();
+      },
+      error: (err) => {
+        console.log('Error deleting job:', err);
+      }
+    });
+  }
+
+  getJobById(id: string): void {
+    this.jobService.getJobById(id).subscribe({
+      next: (res) => {
+        console.log(res)
+        console.log("Data get Successfull");
+        this.router.navigate(['/update', id]);
+      },
+
+      error: (err) => {
+
+        console.log(err);
+      }
+
+    });
 
   }
 
