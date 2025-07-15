@@ -9,6 +9,7 @@ import { provideHttpClient, withFetch } from '@angular/common/http';
 import { AddJob } from './components/add-job/add-job';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { UpdateJob } from './components/update-job/update-job';
+import { JobDetails } from './components/job-details/job-details';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { UpdateJob } from './components/update-job/update-job';
     Home,
     ViewJob,
     AddJob,
-    UpdateJob
+    UpdateJob,
+    JobDetails
   ],
   imports: [
     BrowserModule,

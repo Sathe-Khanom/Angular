@@ -19,11 +19,11 @@
                 <td>{{ j.deadlinedate }}</td>
                 <td>
                     <div class="btn-group" role="group">
-                        <button class="btn btn-primary">
-                            <i class="fas fa-eye"></i>
+                        <button class="btn btn-primary" (click)="getJobDetailsById(j.id)">
+                        <i  class="fas fa-eye" > </i>
                         </button>
                         <button class="btn btn-warning" (click)="getJobById(j.id)">
-                            <i class="fas fa-edit"></i>
+                            <i  class="fas fa-edit"></i>
                         </button>
                         <button class="btn btn-danger" (click)="deleteJob(j.id)">
                             <i class="fas fa-trash-alt"></i>

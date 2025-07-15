@@ -103,17 +103,6 @@
   ],
   "job": [
     {
-      "id": "3f6c",
-      "title": "Junior Officer",
-      "description": "b nhbjghj",
-      "category": "Marketing",
-      "jobtype": "Part-Time",
-      "requirement": "yjyhyhjkujlvhbfg",
-      "location": "Barishal",
-      "pdate": "2025-06-30",
-      "deadlinedate": "2025-07-16"
-    },
-    {
       "id": "b630",
       "title": "dhgfhghgh",
       "description": "xbgchbgfh",
@@ -123,6 +112,28 @@
       "location": "sadfasdf",
       "pdate": "2025-07-01",
       "deadlinedate": "2025-07-03"
+    },
+    {
+      "id": "980f",
+      "title": "dgfdxhbgfjh",
+      "description": "hjm hcn cvb dxzcsafcdfbgb",
+      "category": "Marketing",
+      "jobtype": "Internship",
+      "requirement": "dgvfvb v nhjk,jl.k;/l'/kjmmghdf",
+      "location": "Barishal",
+      "pdate": "2025-07-01",
+      "deadlinedate": "2025-07-17"
+    },
+    {
+      "id": "3328",
+      "title": "fbgfhgfhn",
+      "description": "fghbfghh",
+      "category": "Information Technology",
+      "jobtype": "Internship",
+      "requirement": "fghfghgfbvb",
+      "location": "Barishal",
+      "pdate": "2025-07-04",
+      "deadlinedate": "2025-07-25"
     }
   ]
 }

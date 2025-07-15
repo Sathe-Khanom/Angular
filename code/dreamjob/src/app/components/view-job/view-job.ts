@@ -59,4 +59,21 @@ export class ViewJob {
 
   }
 
+  getJobDetailsById(id: string): void {
+    this.jobService.getJobById(id).subscribe({
+      next: (res) => {
+        console.log(res)
+        console.log("Data get Successfull");
+        this.router.navigate(['/jobdetails', id]);
+      },
+
+      error: (err) => {
+
+        console.log(err);
+      }
+
+    });
+
+  }
+
 }
