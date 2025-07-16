@@ -1,30 +1,43 @@
-<div class="container mt-4">
-  <div class="d-flex justify-content-between align-items-center mb-3 text-center">
-    <h2> Job Details</h2>
-    <a routerLink="/create" class="btn btn-success">+ Add New Job</a>
+<div class="container">
+  <div class="d-flex justify-content-center align-items-center mb-4">
+    <h2 class="text-center mb-0">Job Details</h2>
   </div>
 
-  <div class="row">
-    <div class="col-md-4 mb-4">
+  <div class="row justify-content-center">
+    <div class="col-md-10 col-lg-8">
       <div class="card h-100 shadow-sm">
         <div class="card-body">
           <h5 class="card-title">{{ jobs.title }}</h5>
-          <h6 class="card-subtitle mb-2 text-muted">{{ jobs.category }} | {{ jobs.jobtype }}</h6>
-          <p class="card-text">
-            <strong>Location:</strong> {{ jobs.location }} <br />
-            <strong>Posted:</strong> {{ jobs.pdate | date: 'yyyy-MM-dd' }} <br />
-            <strong>Deadline:</strong> {{ jobs.deadlinedate | date: 'yyyy-MM-dd' }}
+          <h6 class="card-subtitle mb-2 text-muted">
+            {{ jobs.category }} | {{ jobs.jobtype }}
+          </h6>
+
+          <p class="card-text mb-2">
+            <strong>Location:</strong> {{ jobs.location }}<br />
+            <strong>Posted:</strong> {{ jobs.pdate }}<br />
+            <strong>Deadline:</strong> {{ jobs.deadlinedate }}
           </p>
+
           <hr />
-          <p class="card-text">{{ jobs.description | slice:0:100 }}...</p>
+
+          <p class="card-text mb-2">
+            <strong>Description:</strong><br />
+            {{ jobs.description }}
+          </p>
+
+          <hr />
+
+          <p class="card-text">
+            <strong>Requirement:</strong><br />
+            {{ jobs.requirement }}
+          </p>
         </div>
+
         <div class="card-footer bg-transparent border-0 d-flex justify-content-between">
-          <button class="btn btn-sm btn-outline-primary" >Apply</button>
-          <button class="btn btn-sm btn-outline-danger"  >Back</button>
+          <button class="btn btn-outline-primary btn-sm">Apply</button>
+          <button class="btn btn-outline-danger btn-sm">Back</button>
         </div>
       </div>
     </div>
   </div>
 </div>
-
-

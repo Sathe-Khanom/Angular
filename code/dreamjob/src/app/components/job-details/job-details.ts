@@ -28,7 +28,6 @@ export class JobDetails implements OnInit {
   }
 
   loadAllJob(): void {
-
     this.jobService.getJobById(this.id).subscribe({
       next: (data) => {
         this.jobs = data;
@@ -37,7 +36,6 @@ export class JobDetails implements OnInit {
       error: (err) => {
         console.error('Error loading jobs', err);
       }
-
     });
 
   }
@@ -45,7 +43,6 @@ export class JobDetails implements OnInit {
   getJobById(id: string): void {
     this.router.navigate(['/update', id]);
   }
-
 
 }
 
