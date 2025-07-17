@@ -10,6 +10,9 @@ import { AddJob } from './components/add-job/add-job';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { UpdateJob } from './components/update-job/update-job';
 import { JobDetails } from './components/job-details/job-details';
+import { Registration } from './components/registration/registration';
+import { UserProfile } from './components/user-profile/user-profile';
+import { LoginUser } from './components/login-user/login-user';
 
 @NgModule({
   declarations: [
@@ -18,7 +21,10 @@ import { JobDetails } from './components/job-details/job-details';
     ViewJob,
     AddJob,
     UpdateJob,
-    JobDetails
+    JobDetails,
+    Registration,
+    UserProfile,
+    LoginUser
   ],
   imports: [
     BrowserModule,

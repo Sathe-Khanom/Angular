@@ -5,13 +5,19 @@ import { ViewJob } from './components/view-job/view-job';
 import { AddJob } from './components/add-job/add-job';
 import { UpdateJob } from './components/update-job/update-job';
 import { JobDetails } from './components/job-details/job-details';
+import { Registration } from './components/registration/registration';
+import { UserProfile } from './components/user-profile/user-profile';
+import { LoginUser } from './components/login-user/login-user';
 
 const routes: Routes = [
   { path: '', component: Home },
   { path: 'viewjob', component: ViewJob },
   { path: 'addjob', component: AddJob },
   { path: 'update/:id', component: UpdateJob },
-  {path: 'jobdetails/:id', component: JobDetails}
+  {path: 'jobdetails/:id', component: JobDetails},
+  {path: 'reg', component: Registration},
+  {path: 'userprofile', component:UserProfile},
+  {path:'loginuser', component: LoginUser}
 ];
 
 @NgModule({

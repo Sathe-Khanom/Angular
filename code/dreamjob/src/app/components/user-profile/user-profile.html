@@ -1,0 +1,11 @@
+<div class="container mt-5">
+  <div *ngFor="let user of users" class="card p-4 mb-3 shadow">
+    <h4>{{ user.name }}</h4>
+    <p><strong>Email:</strong> {{ user.email }}</p>
+    <p><strong>Mobile:</strong> {{ user.mobile }}</p>
+    <p><strong>Address:</strong> {{ user.address }}</p>
+    <p><strong>Education:</strong> {{ user.education }}</p>
+    <p><strong>Experience:</strong> {{ user.experience }}</p>
+    <p><strong>Role:</strong> {{ user.role }}</p>
+  </div>
+</div>

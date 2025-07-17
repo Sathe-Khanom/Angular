@@ -147,8 +147,28 @@
       "deadlinedate": "2025-07-25"
     }
   ],
-  "user":[
-
-    
+  "user": [
+    {
+      "id": "0b58",
+      "name": "shimanto",
+      "mobile": "2134354657",
+      "email": "sathekhanom550@gmail.com",
+      "address": "dsfrhgyhjkilo",
+      "education": "fghgjmhm",
+      "experience": "ghjhkmj,",
+      "role": "user",
+      "password": "1234"
+    },
+    {
+      "id": "b24f",
+      "name": "dsfgdgrty",
+      "mobile": "fdhtry",
+      "email": "sathekhanomfhdg550@gmail.com",
+      "address": "sdfrsdf",
+      "education": "sgfrt",
+      "experience": "sdfgdsf",
+      "role": "sdfsd",
+      "password": "1245"
+    }
   ]
 }
