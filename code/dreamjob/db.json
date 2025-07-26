@@ -145,6 +145,17 @@
       "location": "Dhaka",
       "pdate": "2025-07-02",
       "deadlinedate": "2025-07-25"
+    },
+    {
+      "id": "04de",
+      "title": "dgfhh",
+      "description": "hgcnjjn",
+      "category": "Finance",
+      "jobtype": "Full-Time",
+      "requirement": "vbnhjnmhg",
+      "location": "Dhaka",
+      "pdate": "2025-07-01",
+      "deadlinedate": "2025-07-16"
     }
   ],
   "user": [
@@ -204,8 +215,5 @@
       "password": "3456"
     }
   ],
-  "employer": [
-
-    
-  ]
+  "employer": []
 }
