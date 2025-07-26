@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 import { UserService } from '../../service/user-service';
+import { AuthService } from '../../service/auth-service';
 
 @Component({
   selector: 'app-registration',
@@ -15,7 +16,7 @@ export class Registration {
 
   constructor(
    private formBuilder: FormBuilder,
-    private userService: UserService, 
+    private authService: AuthService, 
     private router: Router
   ) {
 
@@ -36,7 +37,7 @@ export class Registration {
 
    onSubmit() {
     if (this.regForm.valid) {
-      this.userService.saveUser(this.regForm.value).subscribe(() => {
+      this.authService.registration(this.regForm.value).subscribe(() => {
         alert('User registered successfully!');
         this.router.navigate(['/userprofile']);
       });

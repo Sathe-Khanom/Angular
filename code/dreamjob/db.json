@@ -169,6 +169,43 @@
       "experience": "sdfgdsf",
       "role": "sdfsd",
       "password": "1245"
+    },
+    {
+      "id": "05ba",
+      "name": "shimanto",
+      "mobile": "2134354657",
+      "email": "shimanto@gmail.com",
+      "address": "28/GA/2, Sonatongor, Dhaka-1209",
+      "education": "gngfhfghngfhnjg",
+      "experience": "vnvghfgjhyj",
+      "role": "user",
+      "password": "2345"
+    },
+    {
+      "id": "069c",
+      "name": "dgdfhgf",
+      "mobile": "ghfghfgh",
+      "email": "sathekhanom550@gmail.com",
+      "address": "gfngfhrt",
+      "education": "fgjhnfy",
+      "experience": "fhjyh",
+      "role": "user",
+      "password": "oooo"
+    },
+    {
+      "id": "2a9f",
+      "name": "Sathe",
+      "mobile": "324564846548",
+      "email": "ask550@gmail.com",
+      "address": "fdgsdfhbfgjhn",
+      "education": "ghdjrfasfcdef",
+      "experience": "dcvfdhgghnbn ",
+      "role": "user",
+      "password": "3456"
     }
+  ],
+  "employer": [
+
+    
   ]
 }

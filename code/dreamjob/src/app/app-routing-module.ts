@@ -8,6 +8,7 @@ import { JobDetails } from './components/job-details/job-details';
 import { Registration } from './components/registration/registration';
 import { UserProfile } from './components/user-profile/user-profile';
 import { LoginUser } from './components/login-user/login-user';
+import { EmployerProfile } from './components/employer-profile/employer-profile';
 
 const routes: Routes = [
   { path: '', component: Home },
@@ -17,7 +18,8 @@ const routes: Routes = [
   {path: 'jobdetails/:id', component: JobDetails},
   {path: 'reg', component: Registration},
   {path: 'userprofile', component:UserProfile},
-  {path:'loginuser', component: LoginUser}
+  {path:'loginuser', component: LoginUser},
+  {path: 'emprofile', component: EmployerProfile}
 ];
 
 @NgModule({

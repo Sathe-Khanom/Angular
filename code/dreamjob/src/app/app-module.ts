@@ -13,6 +13,7 @@ import { JobDetails } from './components/job-details/job-details';
 import { Registration } from './components/registration/registration';
 import { UserProfile } from './components/user-profile/user-profile';
 import { LoginUser } from './components/login-user/login-user';
+import { EmployerProfile } from './components/employer-profile/employer-profile';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,8 @@ import { LoginUser } from './components/login-user/login-user';
     JobDetails,
     Registration,
     UserProfile,
-    LoginUser
+    LoginUser,
+    EmployerProfile
   ],
   imports: [
     BrowserModule,

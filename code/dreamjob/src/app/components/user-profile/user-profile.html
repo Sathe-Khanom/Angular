@@ -1,11 +1,14 @@
-<div class="container mt-5">
-  <div *ngFor="let user of users" class="card p-4 mb-3 shadow">
-    <h4>{{ user.name }}</h4>
+<div class="container">
+  <h2>User Profile</h2>
+  <div *ngIf="user">
+    
+    <p><strong>Name:</strong> {{ user.name }}</p>
     <p><strong>Email:</strong> {{ user.email }}</p>
-    <p><strong>Mobile:</strong> {{ user.mobile }}</p>
-    <p><strong>Address:</strong> {{ user.address }}</p>
-    <p><strong>Education:</strong> {{ user.education }}</p>
-    <p><strong>Experience:</strong> {{ user.experience }}</p>
     <p><strong>Role:</strong> {{ user.role }}</p>
+
+    <!-- Add more fields as needed -->
+  </div>
+  <div *ngIf="!user">
+    <p>Loading user profile...</p>
   </div>
 </div>

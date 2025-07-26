@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { UserService } from '../../service/user-service';
 import { Router } from '@angular/router';
+import { AuthService } from '../../service/auth-service';
 
 @Component({
   selector: 'app-login-user',
@@ -11,37 +12,53 @@ import { Router } from '@angular/router';
 })
 export class LoginUser {
 
-  formGroup: FormGroup;
+  loginForm: FormGroup;
+ 
+   errorMessage: string = '';
 
 
   constructor(
     private formBuilder: FormBuilder,
-    private userService: UserService,
+    private authService: AuthService,
     private router: Router) {
-    this.formGroup = this.formBuilder.group({
+    this.loginForm = this.formBuilder.group({
       email: ['', [Validators.required, Validators.email]],
       password: ['', Validators.required]
     });
   }
 
-  onLogin() {
-  if (this.formGroup.valid) {
-    const { email, password } = this.formGroup.value;
-
-    this.userService.login(email, password).subscribe(users => {
-      if (users.length > 0) {
-        // Login success
-        localStorage.setItem('loggedInUser', JSON.stringify(users[0]));
-        this.router.navigate(['/userprofile']);
-      } else {
-        // Login failed
-        alert('Invalid email or password');
-      }
-    }, error => {
-      console.error('Login error:', error);
-      alert('Server error! Please try again later.');
-    });
+  onSubmit(): void {
+  if (this.loginForm.invalid) {
+    this.errorMessage = 'Please fill in all required fields correctly.';
+    return;
   }
+
+  const userDetails = this.loginForm.value;
+
+  this.authService.login(userDetails).subscribe({
+    next: (res) => {
+      console.log('User logged in successfully:', res);
+      
+      this.authService.storeToken(res.token);
+
+      const role = this.authService.getUserRole();
+      console.log('User role:', role);
+
+      if (role === 'user') {
+        this.router.navigate(['/userprofile']);
+      } else if (role === 'admin') {
+        this.router.navigate(['/adminprofile']);
+      } else {
+        this.errorMessage = 'Unknown user role.';
+      }
+
+      this.loginForm.reset();
+    },
+    error: (err) => {
+      console.error('Error logging in:', err);
+      this.errorMessage = 'Invalid email or password.';
+    }
+  });
 }
 
 

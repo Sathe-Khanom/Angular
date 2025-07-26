@@ -1,9 +1,10 @@
 import { Component, OnInit } from '@angular/core';
 import { User } from '../../model/user.model';
-import { Subscription } from 'rxjs';
+import { Observable, of, Subscription } from 'rxjs';
 import { AuthService } from '../../service/auth-service';
 import { Router } from '@angular/router';
 import { UserService } from '../../service/user-service';
+import { HttpClient } from '@angular/common/http';
 
 @Component({
   selector: 'app-user-profile',
@@ -12,14 +13,39 @@ import { UserService } from '../../service/user-service';
   styleUrl: './user-profile.css'
 })
 export class UserProfile implements OnInit {
-  users: any[] = [];
+  
+  
+   user: User | null = null;
+  private subscription: Subscription = new Subscription();
 
-  constructor(private userService: UserService) {}
+  constructor(
+    private authService: AuthService, // ✅ fixed spelling
+    private router: Router,
+    private userSer: UserService
+  ) { }
 
-  ngOnInit() {
-    this.userService.getUsers().subscribe(data => {
-      this.users = data;
+  ngOnInit(): void {
+   this.loadUserProfile();
+  }
+
+  loadUserProfile(): void {
+    const sub = this.userSer.getUserProfile().subscribe({
+      next: (res) => {
+        console.log(res);
+        if (res) {
+          this.user = res;
+        }
+      },
+      error: (err) => {
+        console.error('Error loading user profile:', err);
+      }
     });
+
+    this.subscription.add(sub);
+  }
+
+  ngOnDestroy(): void {
+    this.subscription.unsubscribe();
   }
 
 }

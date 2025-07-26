@@ -10,24 +10,20 @@ import { User } from '../model/user.model';
 export class UserService {
   private baseUrl: string = "http://localhost:3000/user";
 
-
   constructor(
     private http: HttpClient,
     private authService: AuthService
   ) { }
 
-  saveUser(userData: any): Observable<any> {
-    return this.http.post(this.baseUrl, userData);
+
+  getUserProfile(): Observable<User| null> {
+    return of(this.authService.getUserProfileFromStorage());
   }
 
-  getUsers(): Observable<any[]> {
-    return this.http.get<any[]>(this.baseUrl);
+
+  updateUserProfile(user: User): Observable<User> {
+    localStorage.setItem('userProfile', JSON.stringify(user));
+    return this.http.put<User>(`${this.baseUrl}/${user.id}`, user);
   }
-
-  login(email: string, password: string): Observable<User[]> {
-  const url = this.baseUrl + "?email=" + email + "&password=" + password;
-  return this.http.get<User[]>(url);
-}
-
 
 }
