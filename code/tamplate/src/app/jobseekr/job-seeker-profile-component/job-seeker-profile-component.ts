@@ -1,8 +1,7 @@
-import { Component } from '@angular/core';
-import { User } from '../../model/user.model';
-import { Subscription } from 'rxjs';
-import { Router } from '@angular/router';
-import { AuthService } from '../../service/auth-service';
+import { ChangeDetectorRef, Component } from '@angular/core';
+
+import { JobSeeker } from '../../model/jobseeker.model';
+import { JobseekerService } from '../../service/jobseeker.service';
 
 @Component({
   selector: 'app-job-seeker-profile-component',
@@ -12,40 +11,22 @@ import { AuthService } from '../../service/auth-service';
 })
 export class JobSeekerProfileComponent {
 
-   user: User | null = null;
-  private subscription: Subscription = new Subscription();
+   jobSeeker?: JobSeeker;
 
-  constructor(
-    private authService: AuthService, // ✅ fixed spelling
-    private router: Router
-
-  ) { }
+  constructor(private jobSeekerService: JobseekerService, private cdr:ChangeDetectorRef) {}
 
   ngOnInit(): void {
+    this.jobSeekerService.getProfile().subscribe({
+      next: (data) => {
+        this.jobSeeker = data;
+        console.log(data);
+        this.cdr.markForCheck();
 
-    console.log(this.authService.getToken());
-    console.log(this.authService.getUserRole());
-  
+      },
+      error: (err) => {
+        console.error('Failed to load profile', err);
+      }
+    });
   }
-
-  // loadUserProfile(): void {
-  //   const sub = this.userSer.getUserProfile().subscribe({
-  //     next: (res) => {
-  //       console.log(res);
-  //       if (res) {
-  //         this.user = res;
-  //       }
-  //     },
-  //     error: (err) => {
-  //       console.error('Error loading user profile:', err);
-  //     }
-  //   });
-
-  //   this.subscription.add(sub);
-  // }
-
-  // ngOnDestroy(): void {
-  //   this.subscription.unsubscribe();
-  // }
 
 }
