@@ -1,0 +1,20 @@
+<div class="employer-profile-container" *ngIf="employer">
+  <h2>Employer Profile</h2>
+
+  <!-- Logo -->
+  <div class="logo-container" *ngIf="employer.logo">
+    <img [src]="employer.logo" alt="Company Logo" class="company-logo">
+  </div>
+
+  <!-- Contact Info -->
+  <div class="profile-info">
+    <p><strong>Contact Person:</strong> {{ employer.contactPerson }}</p>
+    <p><strong>Email:</strong> {{ employer.email }}</p>
+    <p><strong>Phone:</strong> {{ employer.phone }}</p>
+  </div>
+</div>
+
+<!-- Loading State -->
+<div *ngIf="!employer">
+  <p>Loading profile...</p>
+</div>
