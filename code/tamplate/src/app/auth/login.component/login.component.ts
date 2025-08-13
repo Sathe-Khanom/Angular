@@ -36,16 +36,24 @@ export class LoginComponent {
     const { email, password } = this.loginForm.value;
 
     this.authService.login(email, password).subscribe({
-      next: (response) => {
-        this.successMessage = 'Login successful!';
-        this.errorMessage = null;
-        this.router.navigate(['/jobsekpro']); // Redirect to home or another route after login
-      },
-      error: (err) => {
-        this.errorMessage = 'Login failed. Please check your credentials.';
-        this.successMessage = null;
-      }
-    });
+  next: (response) => {
+    this.successMessage = 'Login successful!';
+    this.errorMessage = null;
+
+    const role = this.authService.getUserRole();
+
+    if (role === 'JOBSEEKER') {
+      this.router.navigate(['/jobsekpro']);
+    } else if (role === 'EMPLOYER') {
+      this.router.navigate(['/emprofile']);
+    }
+  },
+  error: (err) => {
+    this.errorMessage = 'Login failed. Please check your credentials.';
+    this.successMessage = null;
+  }
+});
+
   }
 
 }
