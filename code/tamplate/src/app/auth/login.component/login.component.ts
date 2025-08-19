@@ -44,9 +44,14 @@ export class LoginComponent {
 
     if (role === 'JOBSEEKER') {
       this.router.navigate(['/jobsekpro']);
-    } else if (role === 'EMPLOYER') {
+    }
+     else if (role === 'EMPLOYER') {
       this.router.navigate(['/emprofile']);
     }
+    else if (role === 'ADMIN'){
+      this.router.navigate(['/adminprofile']);
+    }
+
   },
   error: (err) => {
     this.errorMessage = 'Login failed. Please check your credentials.';

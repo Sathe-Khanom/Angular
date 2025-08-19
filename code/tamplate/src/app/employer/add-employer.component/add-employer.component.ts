@@ -25,8 +25,8 @@ export class AddEmployerComponent {
 
     this.employerForm = this.fb.group({
       companyName: ['', Validators.required],
-      address: ['', Validators.required],
-      website: ['', Validators.required],
+      companyAddress: ['', Validators.required],
+      companyWebsite: ['', Validators.required],
       industryType: ['', Validators.required]
     });
   }
@@ -60,9 +60,9 @@ export class AddEmployerComponent {
     const employer = {
       contactPerson: this.userForm.value.name,
       email: this.userForm.value.email,
-      phoneNumber: this.userForm.value.phone,
+      phone: this.userForm.value.phone,
       companyName: this.employerForm.value.companyName,
-      address: this.employerForm.value.address,
+      companyAddress: this.employerForm.value.address,
       website: this.employerForm.value.website,
       industryType: this.employerForm.value.industryType
     };

@@ -6,6 +6,8 @@ import { JobSeekerProfileComponent } from './jobseekr/job-seeker-profile-compone
 import { LoginComponent } from './auth/login.component/login.component';
 import { AddEmployerComponent } from './employer/add-employer.component/add-employer.component';
 import { EmployerProfileComponent } from './employer/employer-profile.component/employer-profile.component';
+import { AddJobComponent } from './jobs/add-job.component/add-job.component';
+import { JobDetailsComponent } from './jobs/job-details.component/job-details.component';
 
 const routes: Routes = [
   {path: 'allUser' , component:AlluserComponent},
@@ -13,7 +15,9 @@ const routes: Routes = [
   {path: 'jobsekpro' , component:JobSeekerProfileComponent},
   {path: 'login' , component:LoginComponent},
   {path: 'addemp', component:AddEmployerComponent},
-  {path: 'emprofile', component: EmployerProfileComponent}
+  {path: 'emprofile', component: EmployerProfileComponent},
+  {path: 'addJob', component: AddJobComponent},
+  {path: 'jobdetails', component: JobDetailsComponent}
 
 
 
