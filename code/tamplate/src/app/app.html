@@ -1,7 +1,7 @@
 <div id="wrapper">
 
   <!-- Sidebar Component -->
-  <app-sidebar></app-sidebar>
+  <app-sidebar *ngIf="showSidebar"></app-sidebar>
 
   <!-- Content Wrapper -->
   <div id="content-wrapper" class="d-flex flex-column">
@@ -9,8 +9,11 @@
     <!-- Main Content -->
     <div id="content">
 
-      <!-- Topbar Component -->
-      <app-navbar></app-navbar>
+      <!-- Default Navbar -->
+      <app-navbar *ngIf="showNavbar"></app-navbar>
+
+      <!-- Custom Jobs Header -->
+      <app-jobs-header *ngIf="showJobsHeader"></app-jobs-header>
 
       <!-- Main Page Content -->
       <div class="container-fluid">

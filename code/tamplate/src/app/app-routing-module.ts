@@ -11,16 +11,16 @@ import { JobDetailsComponent } from './jobs/job-details.component/job-details.co
 import { AllJobs } from './jobs/all-jobs/all-jobs';
 
 const routes: Routes = [
-  {path: 'allUser' , component:AlluserComponent},
-  {path: '' , component:AddjobseekerComponent},
-  {path: 'jobsekpro' , component:JobSeekerProfileComponent},
-  {path: 'login' , component:LoginComponent},
-  {path: 'addemp', component:AddEmployerComponent},
-  {path: 'emprofile', component: EmployerProfileComponent},
-  {path: 'addjob', component: AddJobComponent},
-  {path: 'jobdetails', component: JobDetailsComponent},
-  {path: 'alljobs', component: AllJobs},
-  { path: 'jobs/:id', component: JobDetailsComponent },
+  {path: 'allUser' , component:AlluserComponent, data: { headerType: 'mainHeader' }},
+  {path: 'addseeker' , component:AddjobseekerComponent, data: { headerType: 'mainHeader' }},
+  {path: 'jobsekpro' , component:JobSeekerProfileComponent, data: { headerType: 'mainHeader' }},
+  {path: 'login' , component:LoginComponent, data: { headerType: 'mainHeader' }},
+  {path: 'addemp', component:AddEmployerComponent, data: { headerType: 'mainHeader' }},
+  {path: 'emprofile', component: EmployerProfileComponent, data: { headerType: 'mainHeader' }},
+  {path: 'addjob', component: AddJobComponent , data: { headerType: 'mainHeader' }},
+  {path: 'jobdetails', component: JobDetailsComponent, data: { headerType: 'mainHeader' }},
+  {path: 'alljobs', component: AllJobs,  },
+  { path: 'jobs/:id', component: JobDetailsComponent, },
  
 
 
