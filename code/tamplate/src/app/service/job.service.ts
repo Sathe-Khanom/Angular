@@ -4,6 +4,7 @@ import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { isPlatformBrowser } from '@angular/common';
 import { Job } from '../model/job.model';
 import { Observable } from 'rxjs';
+import { JobDTO } from '../model/JobDTO';
 
 @Injectable({
   providedIn: 'root'
@@ -55,10 +56,20 @@ private baseUrl = environment.apiBaseUrl + '/jobs/';
   }
 
   //  Optional: Get job by ID
-  getJobById(id: number): Observable<Job> {
+  getJobById(id: number): Observable<JobDTO> {
     const headers = this.getAuthHeaders();
-    return this.http.get<Job>(`${this.baseUrl}/${id}`, { headers });
+    return this.http.get<JobDTO>(`${this.baseUrl}${id}`, { headers });
   }
+
+
+    // GET all jobs
+  getAllJobs(): Observable<JobDTO[]> {
+    return this.http.get<JobDTO[]>(this.baseUrl);
+  }
+
+
+
+
 
 
 

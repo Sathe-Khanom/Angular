@@ -8,6 +8,7 @@ import { AddEmployerComponent } from './employer/add-employer.component/add-empl
 import { EmployerProfileComponent } from './employer/employer-profile.component/employer-profile.component';
 import { AddJobComponent } from './jobs/add-job.component/add-job.component';
 import { JobDetailsComponent } from './jobs/job-details.component/job-details.component';
+import { AllJobs } from './jobs/all-jobs/all-jobs';
 
 const routes: Routes = [
   {path: 'allUser' , component:AlluserComponent},
@@ -16,8 +17,11 @@ const routes: Routes = [
   {path: 'login' , component:LoginComponent},
   {path: 'addemp', component:AddEmployerComponent},
   {path: 'emprofile', component: EmployerProfileComponent},
-  {path: 'addJob', component: AddJobComponent},
-  {path: 'jobdetails', component: JobDetailsComponent}
+  {path: 'addjob', component: AddJobComponent},
+  {path: 'jobdetails', component: JobDetailsComponent},
+  {path: 'alljobs', component: AllJobs},
+  { path: 'jobs/:id', component: JobDetailsComponent },
+ 
 
 
 

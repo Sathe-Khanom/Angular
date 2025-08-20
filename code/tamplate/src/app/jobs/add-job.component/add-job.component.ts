@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { JobService } from '../../service/job.service';
 import { Router } from '@angular/router';
+import { log } from 'console';
 
 @Component({
   selector: 'app-add-job.component',
@@ -34,15 +35,17 @@ jobForm: FormGroup;
     const jobData = this.jobForm.value;
 
     this.jobService.createJob(jobData).subscribe({
-      next: () => {
+      next: (res) => {
         this.successMessage = 'Job posted successfully!';
+        console.log(res);
         this.errorMessage = '';
         this.jobForm.reset();
         this.isSubmitted = false;
       },
-      error: () => {
+      error: (err) => {
         this.successMessage = '';
         this.errorMessage = 'Failed to post job.';
+        console.log(err)
       }
     });
   }
